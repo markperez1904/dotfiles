@@ -1,0 +1,91 @@
+{
+    // Generic Settings
+    "workbench.startupEditor": "newUntitledFile",
+    "files.autoSave": "afterDelay",
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "editor.minimap.enabled": false,
+    "code-runner.runInTerminal": true,
+
+    // Config for XML tag stuff
+    "auto-close-tag.enableAutoCloseTag": true,
+    "auto-close-tag.enableAutoCloseSelfClosingTag": true,
+    "auto-close-tag.activationOnLanguage": [
+        "*"
+    ],
+
+    // font config stuff
+    "editor.fontLigatures": true,
+    "editor.formatOnType": true,
+    "markdown.preview.lineHeight": 1,
+    "terminal.integrated.fontSize": 14,
+    "editor.renderLineHighlight": "none",
+    "editor.renderIndentGuides": false,
+    "window.zoomLevel": 0,
+    "workbench.activityBar.visible": true,
+    
+    // Make keywords bold (like while, for, double...)
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "keyword",
+                "settings": {
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "storage",
+                "settings": {
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "constant.language",
+                "settings": {
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "support.class.builtin",
+                "settings": {
+                    "fontStyle": "bold"
+                }
+            }
+        ]
+    },
+    "editor.renderWhitespace": "none",
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "go",
+        "handlebars",
+        "html",
+        "jade",
+        "java",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "pub",
+        "python",
+        "restructuredtext",
+        "rust",
+        "scss",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "yml"
+    ],
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "editor.renderControlCharacters": false,
+    "editor.fontSize": 14,
+    "workbench.colorTheme": "Material Theme Darker",
+}
