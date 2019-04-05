@@ -7,8 +7,8 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Update & Clean
-alias u='(brew update; brew upgrade) || (sudo apt update; sudo apt upgrade) || sudo pacman -Syu'
-alias c='(brew cleanup all) || (sudo apt autoremove; sudo apt autoclean; sudo apt clean) || (sudo pacman -Rscn $(sudo pacman -Qtdq); sudo pacman -Sc; sudo pacman -Scc)'
+alias update='(brew update; brew upgrade) || (sudo apt update; sudo apt upgrade) || sudo pacman -Syu'
+alias clean='(brew cleanup all) || (sudo apt autoremove; sudo apt autoclean; sudo apt clean) || (sudo pacman -Rscn $(sudo pacman -Qtdq); sudo pacman -Sc; sudo pacman -Scc)'
 
 # Macos
 alias hide='defaults write com.apple.finder CreateDesktop false; killall Finder'
