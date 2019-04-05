@@ -84,8 +84,12 @@
         "typescriptreact",
         "yml"
     ],
-    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "workbench.iconTheme": "material-icon-theme",
     "editor.renderControlCharacters": false,
     "editor.fontSize": 14,
     "workbench.colorTheme": "Material Theme Darker",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false
 }
+
