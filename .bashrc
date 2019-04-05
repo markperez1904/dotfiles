@@ -14,6 +14,7 @@ alias clean='(brew cleanup all) || (sudo apt autoremove; sudo apt autoclean; sud
 alias hide='defaults write com.apple.finder CreateDesktop false; killall Finder'
 alias show='defaults write com.apple.finder CreateDesktop true; killall Finder'
 alias p='python3'
+alias n='node'
 alias v='vim'
 alias cv='convert -trim -transparent'
 
