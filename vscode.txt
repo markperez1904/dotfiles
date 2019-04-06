@@ -87,7 +87,7 @@
     "workbench.iconTheme": "material-icon-theme",
     "editor.renderControlCharacters": false,
     "editor.fontSize": 14,
-    "workbench.colorTheme": "Material Theme Darker",
+    "workbench.colorTheme": "Monokai",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "python.jediEnabled": false
