@@ -1,5 +1,6 @@
 {
     // Generic Settings
+    // Total Extensions = 16
     "workbench.startupEditor": "newUntitledFile",
     "files.autoSave": "afterDelay",
     "java.errors.incompleteClasspath.severity": "ignore",
