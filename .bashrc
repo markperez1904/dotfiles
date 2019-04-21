@@ -34,6 +34,7 @@ alias p='python3'
 alias n='node'
 alias v='vim'
 alias cv='convert -trim -transparent'
+alias c='clear'
 
 # Arch Linux
 alias jd='javadoc -version -author -linksource -d ~/Desktop/javadoc'
