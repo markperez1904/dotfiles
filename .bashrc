@@ -1,8 +1,8 @@
 # Ignore 'tput' error message when logging in
 [ -z "$PS1" ] && return
 
-#Rainbow Colors (https://www.kirsle.net/wizards/ps1.html)
-export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
+# Ubuntu Colors
+export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 # Force bash to have auto-completion enabled
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
