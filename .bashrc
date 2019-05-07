@@ -38,6 +38,7 @@ alias c='clear'
 
 # Conda 
 alias on='conda activate'
+alias create='conda create --name'
 
 # Django
 alias pro='django-admin startproject'
