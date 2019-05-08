@@ -44,12 +44,11 @@ alias create='conda create --name'
 alias pro='django-admin startproject'
 alias app='django-admin startapp'
 
-# Docker
-alias up='docker-compose up'
-alias run='docker-compose run web python3 manage.py runserver'
-alias mm='docker-compose run web python3 manage.py makemigrations'
-alias m='docker-compose run web python3 manage.py migrate'
-alias s='docker-compose run web python3 manage.py createsuperuser'
+# Project Management
+alias r='python3 manage.py runserver'
+alias mm='python3 manage.py makemigrations'
+alias m='python3 manage.py migrate'
+alias s='python3 manage.py createsuperuser'
 
 # Arch Linux
 alias jd='javadoc -version -author -linksource -d ~/Desktop/javadoc'
