@@ -44,6 +44,9 @@ alias create='conda create --name'
 alias pro='django-admin startproject'
 alias app='django-admin startapp'
 
+# Docker
+alias up='docker-compose up'
+
 # Project Management
 alias r='python3 manage.py runserver'
 alias mm='python3 manage.py makemigrations'
