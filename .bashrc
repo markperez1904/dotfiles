@@ -36,22 +36,13 @@ alias v='vim'
 alias cv='convert -trim -transparent'
 alias c='clear'
 
-# Conda 
-alias on='conda activate'
-alias create='conda create --name'
-
-# Django
-alias pro='django-admin startproject'
-alias app='django-admin startapp'
-
 # Docker
+alias b='docker-compose build'
 alias up='docker-compose up'
-
-# Project Management
-alias r='python3 manage.py runserver'
-alias mm='python3 manage.py makemigrations'
-alias m='python3 manage.py migrate'
-alias s='python3 manage.py createsuperuser'
+alias r='docker-compose run web python3 manage.py runserver'
+alias mm='docker-compose run web python3 manage.py makemigrations'
+alias m='docker-compose run web python3 manage.py migrate'
+alias s='docker-compose run web python3 manage.py createsuperuser'
 
 # Arch Linux
 alias jd='javadoc -version -author -linksource -d ~/Desktop/javadoc'
@@ -67,20 +58,4 @@ export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/mark/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/mark/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/mark/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/mark/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
