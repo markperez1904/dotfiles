@@ -24,7 +24,6 @@
     "editor.renderLineHighlight": "none",
     "editor.renderIndentGuides": false,
     "window.zoomLevel": 0,
-    "workbench.activityBar.visible": true,
     
     // Make keywords bold (like while, for, double...)
     "editor.tokenColorCustomizations": {
@@ -85,13 +84,27 @@
         "typescriptreact",
         "yml"
     ],
-    "workbench.iconTheme": "material-icon-theme",
     "editor.renderControlCharacters": false,
-    "editor.fontSize": 14,
-    "workbench.colorTheme": "Material Theme",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "python.jediEnabled": false,
-    "workbench.colorCustomizations": {}
+    "workbench.colorCustomizations": {},
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.tabSize": 3,
+    "editor.tabCompletion": "on",
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.fontSize": 12,
+    "workbench.colorTheme": "Material Theme Darker",
+    "window.menuBarVisibility": "hidden",
+    "workbench.iconTheme": "vscode-icons-mac",
 }
-
