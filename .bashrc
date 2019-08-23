@@ -4,6 +4,9 @@
 # Ubuntu Colors
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
+# Flutter Path
+export PATH="$PATH:~/flutter/bin"
+
 # Force bash to have auto-completion enabled
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
@@ -30,24 +33,19 @@ alias clean='(brew cleanup all) || (sudo apt autoremove; sudo apt autoclean; sud
 # Macos
 alias hide='defaults write com.apple.finder CreateDesktop false; killall Finder'
 alias show='defaults write com.apple.finder CreateDesktop true; killall Finder'
-alias p='python3'
-alias n='node'
 alias v='vim'
 alias cv='convert -trim -transparent'
 alias c='clear'
-
-# Docker
-alias b='docker-compose build'
-alias up='docker-compose up'
-alias r='docker-compose run web python3 manage.py runserver'
-alias mm='docker-compose run web python3 manage.py makemigrations'
-alias m='docker-compose run web python3 manage.py migrate'
-alias s='docker-compose run web python3 manage.py createsuperuser'
 
 # Arch Linux
 alias jd='javadoc -version -author -linksource -d ~/Desktop/javadoc'
 alias reflect='sudo reflector --country "United States" --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 alias wifi='sudo systemctl restart NetworkManager'
+
+# Node.js
+alias dev='npm run dev'
+alias gen='npm run generate'
+alias star='npm run start'
 
 # color-code man pages
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
