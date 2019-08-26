@@ -47,7 +47,7 @@ alias dev='npm run dev'
 alias gen='npm run generate'
 alias star='npm run start'
 
-# Andriod Dev
+# Android Dev
 alias android='cd ~/android-studio/bin; ./studio.sh'
 
 # color-code man pages
