@@ -47,6 +47,9 @@ alias dev='npm run dev'
 alias gen='npm run generate'
 alias star='npm run start'
 
+# Andriod Dev
+alias android='cd ~/android-studio/bin; ./studio.sh'
+
 # color-code man pages
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
 export LESS_TERMCAP_md=$'\E[1;36m'     # begin blink
