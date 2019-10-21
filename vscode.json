@@ -104,7 +104,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.fontSize": 12,
-    "workbench.colorTheme": "Material Theme Darker",
+    "workbench.colorTheme": "Material Theme",
     "window.menuBarVisibility": "hidden",
     "workbench.iconTheme": "vscode-icons-mac",
 }
