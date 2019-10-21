@@ -27,15 +27,17 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Update & Clean
-alias update='(brew update; brew upgrade) || (sudo apt update; sudo apt upgrade) || sudo pacman -Syu'
-alias clean='(brew cleanup all) || (sudo apt autoremove; sudo apt autoclean; sudo apt clean) || (sudo pacman -Rscn $(sudo pacman -Qtdq); sudo pacman -Sc; sudo pacman -Scc)'
+alias update='sudo apt update; sudo apt upgrade'
+alias clean='sudo apt autoremove; sudo apt autoclean; sudo apt clean'
+alias fix='sudo apt install -f'
 
 # Macos
 alias hide='defaults write com.apple.finder CreateDesktop false; killall Finder'
 alias show='defaults write com.apple.finder CreateDesktop true; killall Finder'
+alias con='convert -trim -transparent'
 alias v='vim'
-alias cv='convert -trim -transparent'
 alias c='clear'
+alias r='reset'
 
 # Arch Linux
 alias jd='javadoc -version -author -linksource -d ~/Desktop/javadoc'
@@ -59,4 +61,3 @@ export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
-
