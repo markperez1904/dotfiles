@@ -23,8 +23,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# youtube-dl for mp3 files
-alias youtube="youtube-dl -f 'bestaudio[ext=mp3]'"
+# youtube-dl for (.m4a) files
+alias youtube="youtube-dl -f 'bestaudio[ext=m4a]'"
 
 # Update & Clean
 alias update='sudo apt update; sudo apt upgrade'
