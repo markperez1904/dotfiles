@@ -4,9 +4,6 @@
 # Ubuntu Colors
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
-# Flutter Path
-export PATH="$PATH:~/flutter/bin"
-
 # Force bash to have auto-completion enabled
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
@@ -25,6 +22,9 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# youtube-dl for mp3 files
+alias youtube="youtube-dl -f 'bestaudio[ext=mp3]'"
 
 # Update & Clean
 alias update='sudo apt update; sudo apt upgrade'
@@ -48,9 +48,6 @@ alias wifi='sudo systemctl restart NetworkManager'
 alias dev='npm run dev'
 alias gen='npm run generate'
 alias star='npm run start'
-
-# Android Dev
-alias android='cd ~/android-studio/bin; ./studio.sh'
 
 # color-code man pages
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
