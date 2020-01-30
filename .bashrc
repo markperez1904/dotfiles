@@ -18,6 +18,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# Windows 10 subsystem of the linux thing
+alias win='cd /mnt/c/Users/mark'
+
 # Ubuntu Defaults
 alias ll='ls -alF'
 alias la='ls -A'
