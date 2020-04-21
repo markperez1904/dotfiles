@@ -41,6 +41,7 @@ alias con='convert -trim -transparent'
 alias v='vim'
 alias c='clear'
 alias r='reset'
+alias e='exit'
 
 # Arch Linux
 alias jd='javadoc -version -author -linksource -d ~/Desktop/javadoc'
