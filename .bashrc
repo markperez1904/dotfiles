@@ -30,8 +30,8 @@ alias l='ls -CF'
 alias youtube="youtube-dl -f 'bestaudio[ext=m4a]'"
 
 # Update & Clean
-alias update='sudo apt update; sudo apt upgrade'
-alias clean='sudo apt autoremove; sudo apt autoclean; sudo apt clean'
+alias update='(sudo apt update; sudo apt upgrade) || sudo pacman -Syyu'
+alias clean='(sudo apt autoremove; sudo apt autoclean; sudo apt clean) || sudo pacman -Rscn $(sudo pacman -Qtdq); sudo pacman -Scc'
 alias fix='sudo apt install -f'
 
 # Macos
