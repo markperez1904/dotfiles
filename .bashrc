@@ -29,6 +29,9 @@ alias l='ls -CF'
 # youtube-dl for (.m4a) files
 alias youtube="youtube-dl -f 'bestaudio[ext=m4a]'"
 
+# launch minecraft
+alias minecraft='cd ~/Documents/mc/minecraft\ game\ file ; java -jar Minecraft\ Launcher.jar'
+
 # Update & Clean
 alias update='(sudo apt update; sudo apt upgrade) || sudo pacman -Syyu'
 alias clean='(sudo apt autoremove; sudo apt autoclean; sudo apt clean) || sudo pacman -Rscn $(sudo pacman -Qtdq); sudo pacman -Scc'
