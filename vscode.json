@@ -104,7 +104,19 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.fontSize": 12,
-    "workbench.colorTheme": "Material Theme",
     "window.menuBarVisibility": "hidden",
-    "workbench.iconTheme": "vscode-icons-mac",
+    "workbench.iconTheme": "vscode-icons",
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "python.languageServer": "Pylance",
+    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "prettier.singleQuote": true,
+    "prettier.jsxSingleQuote": true,
 }
