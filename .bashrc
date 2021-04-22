@@ -27,7 +27,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # youtube-dl for (.m4a) files
-alias youtube="youtube-dl -f 'bestaudio[ext=m4a]'"
+alias youtube="youtube-dl -f 'worstaudio[ext=m4a]'"
 
 # launch minecraft
 alias minecraft='cd ~/Documents/mc/minecraft\ game\ file ; java -jar Minecraft\ Launcher.jar'
@@ -45,6 +45,7 @@ alias v='vim'
 alias c='clear'
 alias r='reset'
 alias e='exit'
+alias brewing='brew update -v; brew upgrade -v; brew cleanup -v'
 
 # Arch Linux
 alias jd='javadoc -version -author -linksource -d ~/Desktop/javadoc'
