@@ -3,6 +3,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/mark/.oh-my-zsh"
 
+# setup chrome driver for linkedin tool
+export CHROMEDRIVER=~/chromedriver
+
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
@@ -28,10 +31,13 @@ alias ll='ls -al'
 alias la='ls -a'
 alias l='ls'
 
-# youtube-dl for (.m4a) files, and mp4>mov
+# youtube-dl and ffmpeg stuff
 alias youtube="youtube-dl -f 'worstaudio[ext=m4a]'"
 alias mov-to-mp4='for i in *.mov; do ffmpeg -i "$i" "${i%.*}.mp4"; done'
-alias mp4-to-mp4='for i in *.mp4; do ffmpeg -i "$i" "${i%.*}-compressed.mp4"; done'
+alias mp3-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.mp3"; done'
+alias ogg-all='for i in *; do ffmpeg -i "$i" -b:a 64k "${i%.*}-mini.ogg"; done'
+alias mp4-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.mp4"; done'
+alias jpg-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.jpg"; done'
 
 # launch minecraft
 alias minecraft='cd ~/Documents/mc/minecraft\ game\ file ; java -jar Minecraft\ Launcher.jar'
@@ -71,3 +77,9 @@ export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
 
+# node setup to use the LTS package
+export PATH="/opt/homebrew/opt/node@14/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/node@14/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/node@14/include"
+
+# end of file
