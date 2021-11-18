@@ -78,8 +78,8 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
 
 # node setup to use the LTS package
-export PATH="/opt/homebrew/opt/node@14/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/node@14/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/node@14/include"
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/node@16/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/node@16/include"
 
 # end of file
