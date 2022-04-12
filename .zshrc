@@ -1,10 +1,7 @@
 # ZSH CONFIG
 
-# Path to your oh-my-zsh installation.
+# Path to your oh-my-zsh installation (Mac).
 export ZSH="/Users/mark/.oh-my-zsh"
-
-# setup chrome driver for linkedin tool
-export CHROMEDRIVER=~/chromedriver
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
