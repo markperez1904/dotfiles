@@ -40,7 +40,7 @@ alias jpg-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.jpg"; done'
 alias minecraft='cd ~/Documents/mc/minecraft\ game\ file ; java -jar Minecraft\ Launcher.jar'
 
 # Update & Clean
-alias update='(sudo apt update; sudo apt upgrade) || sudo pacman -Syyu'
+alias update='(sudo apt update; sudo apt upgrade) || yay -Syyu'
 alias clean='(sudo apt autoremove; sudo apt autoclean; sudo apt clean) || sudo pacman -Rscn $(sudo pacman -Qtdq); sudo pacman -Scc'
 alias fix='sudo apt install -f'
 
