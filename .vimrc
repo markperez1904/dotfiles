@@ -28,7 +28,8 @@ let g:closetag_shortcut = '>'
 
 " Normal vim setup
 syntax on
-colo molokai
+colo default
+" colo molokai
 
 " Make tab key function like emacs tab key
 set cinkeys=0{,0},0),0#,!<Tab>,;,:,o,O,e
@@ -44,4 +45,3 @@ set cinoptions={1s,>2s,e-1s,^-1s,n-1s,:1s,p5,i4,(0,u0,W1s shiftwidth=4
 set backspace=indent,eol,start
 set ruler
 let c_no_curly_error=1
-
