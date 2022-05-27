@@ -35,6 +35,7 @@ alias mp3-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.mp3"; done'
 alias ogg-all='for i in *; do ffmpeg -i "$i" -b:a 64k "${i%.*}-mini.ogg"; done'
 alias mp4-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.mp4"; done'
 alias jpg-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.jpg"; done'
+alias png-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.png"; done'
 
 # launch minecraft
 alias minecraft='cd ~/Documents/mc/minecraft\ game\ file ; java -jar Minecraft\ Launcher.jar'
