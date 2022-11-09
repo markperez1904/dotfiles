@@ -29,7 +29,7 @@ alias la='ls -a'
 alias l='ls'
 
 # youtube-dl and ffmpeg stuff
-alias youtube="youtube-dl -f 'worstaudio[ext=m4a]'"
+alias youtube="yt-dlp -x --audio-format aac"
 alias mov-to-mp4='for i in *.mov; do ffmpeg -i "$i" "${i%.*}.mp4"; done'
 alias mp3-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.mp3"; done'
 alias ogg-all='for i in *; do ffmpeg -i "$i" -b:a 64k "${i%.*}-mini.ogg"; done'
