@@ -1,7 +1,7 @@
 # ZSH CONFIG
 
-# Path to your oh-my-zsh installation (Mac).
-export ZSH="$HOME/.oh-my-zsh"
+# Path to your oh-my-zsh installation.
+export ZSH="~/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
@@ -9,9 +9,7 @@ ZSH_THEME="robbyrussell"
 # source zsh colors
 source $ZSH/oh-my-zsh.sh
 
-# BASH CONFIG
-
-# Color-code the directories when using 'ls'
+# HYBRID CONFIG - Color-code the directories when using 'ls'
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
@@ -19,9 +17,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
-# Windows 10 subsystem of the linux thing
-alias win='cd /mnt/c/Users/mark'
 
 # Ubuntu Defaults
 alias ll='ls -al'
@@ -32,7 +27,8 @@ alias l='ls'
 alias youtube="yt-dlp -x --audio-format opus --embed-metadata"
 alias mov-to-mp4='for i in *.mov; do ffmpeg -i "$i" "${i%.*}.mp4"; done'
 alias mp3-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.mp3"; done'
-alias ogg-all='for i in *; do ffmpeg -i "$i" -b:a 64k "${i%.*}-mini.ogg"; done'
+alias ogg-all='for i in *; do ffmpeg -i "$i" -b:a 128k "${i%.*}-mini.ogg"; done'
+alias ogg-small='for i in *; do ffmpeg -i "$i" -b:a 64k "${i%.*}-mini.ogg"; done'
 alias mp4-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.mp4"; done'
 alias jpg-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.jpg"; done'
 alias png-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.png"; done'
@@ -41,7 +37,7 @@ alias png-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.png"; done'
 alias minecraft='cd ~/Documents/mc/minecraft\ game\ file ; java -jar Minecraft\ Launcher.jar'
 
 # Update & Clean
-alias update='(sudo apt update; sudo apt upgrade) || yay -Syyu'
+alias update='(sudo apt update; sudo apt upgrade) || sudo pacman -Syyu'
 alias clean='(sudo apt autoremove; sudo apt autoclean; sudo apt clean) || sudo pacman -Rscn $(sudo pacman -Qtdq); sudo pacman -Scc'
 alias fix='sudo apt install -f'
 
