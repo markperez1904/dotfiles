@@ -1,3 +1,5 @@
+# BASH CONFIG
+
 # Ignore 'tput' error message when logging in
 [ -z "$PS1" ] && return
 
@@ -9,7 +11,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# Color-code the directories when using 'ls'
+# HYBRID CONFIG - Color-code the directories when using 'ls'
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
@@ -18,16 +20,20 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# Windows 10 subsystem of the linux thing
-alias win='cd /mnt/c/Users/mark'
-
 # Ubuntu Defaults
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -al'
+alias la='ls -a'
+alias l='ls'
 
-# youtube-dl for (.m4a) files
-alias youtube="youtube-dl -f 'worstaudio[ext=m4a]'"
+# youtube-dl and ffmpeg stuff
+alias youtube="yt-dlp -x --audio-format opus --embed-metadata"
+alias mov-to-mp4='for i in *.mov; do ffmpeg -i "$i" "${i%.*}.mp4"; done'
+alias mp3-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.mp3"; done'
+alias ogg-all='for i in *; do ffmpeg -i "$i" -b:a 128k "${i%.*}-mini.ogg"; done'
+alias ogg-small='for i in *; do ffmpeg -i "$i" -b:a 64k "${i%.*}-mini.ogg"; done'
+alias mp4-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.mp4"; done'
+alias jpg-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.jpg"; done'
+alias png-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.png"; done'
 
 # launch minecraft
 alias minecraft='cd ~/Documents/mc/minecraft\ game\ file ; java -jar Minecraft\ Launcher.jar'
@@ -45,7 +51,7 @@ alias v='vim'
 alias c='clear'
 alias r='reset'
 alias e='exit'
-alias brewing='brew update -v; brew upgrade -v; brew cleanup -v'
+alias brewing='brew update; brew upgrade; brew cleanup'
 
 # Arch Linux
 alias jd='javadoc -version -author -linksource -d ~/Desktop/javadoc'
@@ -66,3 +72,10 @@ export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
+
+# node setup to use the LTS package
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/node@16/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/node@16/include"
+
+# end of file
