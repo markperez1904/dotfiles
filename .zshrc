@@ -1,7 +1,7 @@
 # ZSH CONFIG
 
 # Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
@@ -27,11 +27,13 @@ alias l='ls'
 alias youtube="yt-dlp -x --audio-format m4a"
 alias mov-to-mp4='for i in *.mov; do ffmpeg -i "$i" "${i%.*}.mp4"; done'
 alias mp3-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.mp3"; done'
-alias ogg-all='for i in *; do ffmpeg -i "$i" -b:a 128k "${i%.*}-mini.ogg"; done'
-alias ogg-small='for i in *; do ffmpeg -i "$i" -b:a 64k "${i%.*}-mini.ogg"; done'
+alias opus-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.opus"; done'
 alias mp4-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.mp4"; done'
 alias jpg-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.jpg"; done'
 alias png-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.png"; done'
+
+# ~
+alias inflection='for i in *; do sox "$i" "${i%.*}-mini.mp3" pitch -150; done'
 
 # launch minecraft
 alias minecraft='cd ~/Documents/mc/minecraft\ game\ file ; java -jar Minecraft\ Launcher.jar'
