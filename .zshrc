@@ -24,9 +24,7 @@ alias la='ls -a'
 alias l='ls'
 
 # youtube-dl and ffmpeg stuff
-alias youtube="yt-dlp -x --audio-format m4a"
-alias mov-to-mp4='for i in *.mov; do ffmpeg -i "$i" "${i%.*}.mp4"; done'
-alias mp3-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.mp3"; done'
+alias youtube="yt-dlp -x --audio-format opus"
 alias opus-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.opus"; done'
 alias mp4-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.mp4"; done'
 alias jpg-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.jpg"; done'
