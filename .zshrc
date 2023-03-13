@@ -31,10 +31,11 @@ alias jpg-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.jpg"; done'
 alias png-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.png"; done'
 
 # ~
-alias inflection='for i in *; do sox "$i" "${i%.*}-mini.mp3" pitch -150; done'
+alias deflection='for i in *; do sox "$i" "${i%.*}-mini.mp3" pitch -150; done'
+alias inflection='for i in *; do sox "$i" "${i%.*}-mini.mp3" pitch 150; done'
 
 # whisper AI
-alias deflection='whisper --model tiny --threads 6'
+alias decipher='whisper --model tiny --threads 6'
 
 # Update & Clean
 alias update='(sudo apt update; sudo apt upgrade) || sudo pacman -Syyu'
