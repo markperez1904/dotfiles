@@ -33,8 +33,8 @@ alias png-all='for i in *; do ffmpeg -i "$i" "${i%.*}-mini.png"; done'
 # ~
 alias inflection='for i in *; do sox "$i" "${i%.*}-mini.mp3" pitch -150; done'
 
-# launch minecraft
-alias minecraft='cd ~/Documents/mc/minecraft\ game\ file ; java -jar Minecraft\ Launcher.jar'
+# whisper AI
+alias deflection='whisper --model tiny --threads 6'
 
 # Update & Clean
 alias update='(sudo apt update; sudo apt upgrade) || sudo pacman -Syyu'
@@ -44,16 +44,9 @@ alias fix='sudo apt install -f'
 # Macos
 alias hide='defaults write com.apple.finder CreateDesktop false; killall Finder'
 alias show='defaults write com.apple.finder CreateDesktop true; killall Finder'
-alias con='convert -trim -transparent'
-alias v='vim'
-alias c='clear'
-alias r='reset'
-alias e='exit'
 alias brewing='brew update; brew upgrade; brew cleanup'
 
 # Arch Linux
-alias jd='javadoc -version -author -linksource -d ~/Desktop/javadoc'
-alias reflect='sudo reflector --country "United States" --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 alias wifi='sudo systemctl restart NetworkManager'
 
 # Node.js
@@ -70,10 +63,5 @@ export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
-
-# node setup to use the LTS package
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/node@16/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/node@16/include"
 
 # end of file
