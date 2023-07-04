@@ -38,7 +38,7 @@ alias inflection='for i in *; do sox "$i" "${i%.*}-mini.mp3" pitch 150; done'
 alias decipher='whisper --model tiny --threads 6'
 
 # Update & Clean
-alias update='(sudo apt update; sudo apt upgrade) || sudo pacman -Syyu'
+alias update='(sudo apt update; sudo apt upgrade) || yay -Syyu'
 alias clean='(sudo apt autoremove; sudo apt autoclean; sudo apt clean) || sudo pacman -Rscn $(sudo pacman -Qtdq); sudo pacman -Scc'
 alias fix='sudo apt install -f'
 
